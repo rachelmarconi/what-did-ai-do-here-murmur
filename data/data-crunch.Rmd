@@ -1,0 +1,161 @@
+---
+title: "Data crunching"
+author: "Rachel Marconi"
+date: "2025-04-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Libraries
+```{r libs, echo=FALSE}
+library(tidyverse)
+library(janitor)
+library(stringr)
+library(ggplot2)
+
+```
+
+
+## Let's get that data loaded in
+```{r}
+data <- read_csv('us_ai_survey_unique_50.csv')
+head(data, n=5)
+```
+
+## What duplicates do we have here
+```{r}
+income_range <- data %>% 
+  group_by(income) %>% 
+  count() %>% 
+  mutate(income = factor(income, levels = c("Low","Lower-Middle","Upper-Middle","High"))) %>% 
+  ggplot(aes(x=income, y=n, label)) +
+    geom_col()+ 
+    geom_text(aes(label = n), vjust = -.25)
+
+income_range
+
+```
+
+```{r}
+edu_range <- data %>% 
+  group_by(education_level) %>% 
+  count() %>% 
+  mutate(education_level = factor(education_level, levels = c("High School","Some College","Associate Degree","Bachelor’s Degree", "Master’s Degree","Doctorate"))) %>% 
+  ggplot(aes(y=n, x=education_level)) +
+    geom_col()+ 
+    geom_text(aes(label = n), vjust = -.25)
+
+edu_100_by_q4 <- data %>% 
+  filter(q4_rating != 3) %>% #"yes, job loss" or "no job loss"
+  mutate(liklihood = if_else(q4_rating>3,"Job loss probable","Job loss unlikely")) %>% 
+  group_by(liklihood, education_level) %>% 
+  count() %>% 
+  mutate(education_level = factor(education_level, levels = c("High School","Some College","Associate Degree","Bachelor’s Degree", "Master’s Degree","Doctorate"))) %>% 
+  ggplot(aes(y=liklihood, x=n, fill = education_level)) +
+    geom_bar(stat="identity")
+
+edu_range
+edu_100_by_q4
+
+```
+
+```{r}
+q1_range <- data %>% 
+  group_by(q1_rating) %>% 
+  count() %>% 
+  ggplot(aes(y=n, x=q1_rating)) +
+    geom_col()+ 
+    geom_text(aes(label = n), vjust = -.25)
+
+q1_range
+
+```
+
+```{r}
+q2_range <- data %>% 
+  group_by(q2_rating) %>% 
+  count() %>% 
+  ggplot(aes(y=n, x=q2_rating)) +
+    geom_col()+ 
+    geom_text(aes(label = n), vjust = -.25)
+
+q2_range
+
+```
+
+```{r}
+
+q4_range <- data %>% 
+  #group_by(q4_rating) %>% 
+  #count() %>% 
+  mutate(fat_income = ifelse(income %in% c("High","Upper-Middle"),"High","Low")) %>% 
+  ggplot(aes(x=fat_income, y=q3_cat, color = q1_rating)) +
+    geom_jitter(width = .25,height=.25, size=6) 
+    #geom_text(aes(label = n), vjust = -.25)
+
+q4_range
+
+```
+
+
+```{r}
+
+q4_cat <- data %>% 
+  #group_by(q4_rating) %>% 
+  #count() %>% 
+  mutate(fat_income = ifelse(income %in% c("High","Upper-Middle"),"High","Low")) %>% 
+  ggplot(aes(x=q5_cat, y=q3_cat, color = gender)) +
+    geom_jitter(width = .25,height=.25, size=6) 
+    #geom_text(aes(label = n), vjust = -.25)
+
+q4_cat
+
+```
+```{r}
+
+pie <- data %>% 
+  group_by(q5_cat) %>% 
+  count() %>% 
+  mutate(share = n/50* 100) %>% 
+  write_csv('chart5data.csv') %>% 
+  #mutate(prop = n / sum(pie$n) *100) %>%
+  #mutate(ypos = cumsum(prop)- 0.5*prop ) %>% 
+  ggplot(aes(x="", y=q5_cat, fill = q5_cat)) +
+    geom_bar(stat="identity",width = 1)+
+    coord_polar("y",start=0)
+
+pie
+
+```
+
+### This one is different because it's text
+```{r}
+q3_range <- data %>% 
+  #group_by(q3_open) %>% 
+  #count() %>% 
+  mutate(education_level = factor(education_level, levels = c("High School","Some College","Associate Degree","Bachelor’s Degree", "Master’s Degree","Doctorate"))) %>% 
+  ggplot(aes(x=n, y = reorder(q3_open, n))) +
+    geom_col()+ 
+    geom_text(aes(label = n, y = q3_open), hjust = -.25)
+
+q3_range
+
+```
+```{r}
+q5_range <- data %>% 
+  group_by(q5_open) %>% 
+  count() %>% 
+  ggplot(aes(x=n, y = reorder(q5_open, n))) +
+    geom_col()+ 
+    geom_text(aes(label = n, y = q5_open), hjust = -.25)
+
+q5_range
+
+```
+
+
+

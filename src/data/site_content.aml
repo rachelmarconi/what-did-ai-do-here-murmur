@@ -1,0 +1,119 @@
+
+[+intro]
+This is an introduction paragraph explaining the survey. It is an overview of the conclusions and an outline of what Whispr did to fill in data, with a note about how we want to explore it anyway as an experiment. It may include a sentence about the survey methods for context, such as what sort of population we drew on for responses and what sort of blind spots we can expect. But mostly, it’s about our conclusions.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+[]
+
+
+[sections]
+
+
+section_ID: 1
+section_title: Here’s the introduction, which showcases some quotes and geogs
+
+
+chart_ID: Chart1
+title: 
+description: Explore what respondents say about
+source: 
+notes: This dataviz focuses on geographies and baseline quotes. If I had actual locations, I might play with including a correlation with RUC codes to see if rurality impacts sentiment. Also, I went with using zip codes instead of states and cities here (since the cities have fun, impossible names). I have no problem making this in DataWrapper as it includes the exact functionality I want, right out of the box. 
+
+
+[.+text]
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+[]
+
+
+
+
+
+section_ID: 2
+section_title: Here’s a section looking into common themes of responses
+
+
+button_label: Distribution
+chart_ID: Chart2A
+title: 
+[.+description]
+What might AI help with?
+What industries might benefit?
+[]
+source: 
+notes: 
+
+
+[.+text]
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+[]
+
+
+section_ID: 3
+section_title: Specific concerns about the future of AI
+
+
+button_label: First
+chart_ID: Chart5A
+title: 
+description: Common worries about AI
+source: 
+notes: 
+
+
+[.+text]
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+[]
+
+[]
+
+
+full_tool_title: Explore the full dataset with this interactive tool
+full_tool_how_to: This is an explanation of how to interact with the tool and what the data structure is, ie what the questions are. 
+
+
+
+[+about_the_data]
+Here is a full explanation of our survey methods, our respondents, our blind spots, our terminology, and anything else a very inquisitive person may want to know. Maybe we link to our public repository with our analysis code as the cherry on top. Maybe we touch on our weighting system and how we made this data useful compared with the entire population. 
+
+Here we also have a thorough explanation of Whispr and who gave it authority to make up data. We can get into what exactly happened and how we’re instituting more checkpoints with AI for future projects to make sure all data has been human-fact-checked before publication. We can also get into what Whispr normally does and why we think it’s a beneficial part of our day to day processes.
+
+This was a fun assessment and I enjoyed creating this! The data being 100% random definitely through a wrench into finding meaningful chart types for each section, but the exercise was interesting. 
+
+[]
+
+
+[.credits]
+label: Research
+content: me
+
+label: Data visualization and development
+content: me
+
+label: Design
+content: me
+
+label: Editing
+content: none
+
+label: Writing
+content: none
+[]
+
+view_on_git_text: View this project on <a href="https://github.com/rachelmarconi/what-did-ai-do-here-murmur" target="_blank">GitHub</a>.
